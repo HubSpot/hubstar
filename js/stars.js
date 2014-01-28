@@ -3,8 +3,6 @@
 
   init = function(el, user, repo) {
     var i, odometer, update;
-    user = 'HubSpot';
-    repo = 'odometer';
     odometer = new Odometer({
       el: el,
       theme: 'minimal',
@@ -41,7 +39,6 @@
     var matches, re, spinner, subtitle;
     re = /^\/(\w+)\/(\w+)\/(\w+)/;
     matches = re.exec(document.location.pathname);
-    matches = [];
     if (!matches) {
       document.write("Path not understood, please double check the URL (try '/spin/HubSpot/stars')");
       return;

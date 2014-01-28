@@ -1,6 +1,4 @@
 init = (el, user, repo) ->
-  user = 'HubSpot'
-  repo = 'odometer'
   odometer = new Odometer
     el: el
     theme: 'minimal'
@@ -39,7 +37,6 @@ do ->
 
   matches = re.exec document.location.pathname
 
-  matches = []
   if not matches
     document.write "Path not understood, please double check the URL (try '/spin/HubSpot/stars')"
     return
