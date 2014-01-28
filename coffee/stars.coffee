@@ -46,8 +46,6 @@ do ->
 
   spinner = document.querySelector '.odometer'
 
-  document.querySelector('.label').innerHTML = 'Github ★s so far:'
-
   subtitle = document.querySelector '.subtitle'
   subtitle.innerHTML = """<a href='http://github.com/#{ matches[2] }/#{ matches[3] }'>
     Star #{ matches[3] }</a> on GitHub for your next project.
