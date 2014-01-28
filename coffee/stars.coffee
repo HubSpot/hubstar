@@ -6,7 +6,6 @@ init = (el, user, repo) ->
 
   odometer.render()
 
-  i = 0
   update = ->
     req = new XMLHttpRequest
 
@@ -45,7 +44,7 @@ do ->
 
   subtitle = document.querySelector '.subtitle'
   subtitle.innerHTML = """<a href='http://github.com/#{ matches[2] }/#{ matches[3] }'>
-    Star #{ matches[3] }</a> on GitHub for your next project.
+    Star #{ matches[3] }</a> on GitHub to remember.
   """
 
   init spinner, matches[2], matches[3]

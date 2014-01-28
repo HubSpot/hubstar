@@ -2,14 +2,13 @@
   var init;
 
   init = function(el, user, repo) {
-    var i, odometer, update;
+    var odometer, update;
     odometer = new Odometer({
       el: el,
       theme: 'minimal',
       value: 0
     });
     odometer.render();
-    i = 0;
     update = function() {
       var done, req;
       req = new XMLHttpRequest;
@@ -45,7 +44,7 @@
     }
     spinner = document.querySelector('.odometer');
     subtitle = document.querySelector('.subtitle');
-    subtitle.innerHTML = "<a href='http://github.com/" + matches[2] + "/" + matches[3] + "'>\nStar " + matches[3] + "</a> on GitHub for your next project.";
+    subtitle.innerHTML = "<a href='http://github.com/" + matches[2] + "/" + matches[3] + "'>\nStar " + matches[3] + "</a> on GitHub to remember.";
     return init(spinner, matches[2], matches[3]);
   })();
 
