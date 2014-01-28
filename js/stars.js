@@ -47,6 +47,7 @@
       return;
     }
     spinner = document.querySelector('.odometer');
+    document.querySelector('.label').innerHTML = 'Github ★s so far:';
     subtitle = document.querySelector('.subtitle');
     subtitle.innerHTML = "<a href='http://github.com/" + matches[2] + "/" + matches[3] + "'>\nStar " + matches[3] + "</a> on GitHub for your next project.";
     return init(spinner, matches[2], matches[3]);
