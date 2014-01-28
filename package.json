@@ -1,0 +1,18 @@
+{
+  "name": "stars",
+  "version": "0.1.0",
+  "description": "",
+  "authors": [
+    "Zack Bloom <zbloom@hubspot.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "gulp": "~3.4.0",
+    "gulp-uglify": "~0.1.0",
+    "gulp-coffee": "~1.2.5",
+    "gulp-rename": "~0.2.1",
+    "gulp-util": "~2.2.9",
+    "gulp-bower": "0.0.1"
+  }
+}

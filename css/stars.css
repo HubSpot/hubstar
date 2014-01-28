@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+.content {
+  padding: 10px;
+  margin-bottom: 6px;
+  font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  position: relative;
+  min-width: 320px;
+}
+.label {
+  background: #eee;
+  display: inline-block;
+  padding: 15px 13px 13px;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 4px 0 0 4px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  width: 100%;
+}
+.odometer {
+  background: #444;
+  color: #fff;
+  padding: 13px 21px 11px;
+  margin: auto;
+  line-height: 1 !important;
+  font-size: 1.5em;
+  border-radius: 0 4px 4px 0;
+  position: absolute !important;
+  right: 0;
+  top: 10px;
+}
+.subtitle {
+  padding-left: 13px;
+  opacity: 0.7;
+}
