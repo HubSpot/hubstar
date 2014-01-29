@@ -32,7 +32,15 @@
       el.className += ' twitter';
       el.innerHTML = "<div class=\"label\">Tweets</div><div class=\"odometer\">0</div>\n<div class=\"subtitle\"></div>";
       subtitle = el.querySelector('.subtitle');
-      subtitle.innerHTML = "<a href='https://twitter.com/intent/tweet" + document.location.search + "'>Tweet Now</a>";
+      subtitle.innerHTML = "<a target='_blank' href>Tweet Now</a>";
+      subtitle.addEventListener('click', function(e) {
+        var left, top, url;
+        e.preventDefault();
+        url = "https://twitter.com/intent/tweet" + document.location.search;
+        left = screen.width / 2 - 550 / 2;
+        top = screen.height / 2 - 420 / 2;
+        return window.open(url, 'intent', "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + (left | 0) + ",top=" + (top | 0));
+      });
       spinner = el.querySelector('.odometer');
       return init(spinner);
     }
