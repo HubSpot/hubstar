@@ -30,7 +30,7 @@
     init: function(el, theme) {
       var spinner;
       el.className += ' twitter';
-      el.innerHTML = "<div class=\"label\">Tweet</div><div class=\"odometer\">0</div>";
+      el.innerHTML = "<div class=\"label\">Tweet This</div><div class=\"odometer\">0</div>";
       el.addEventListener('click', function(e) {
         var left, top, url;
         e.preventDefault();

@@ -29,7 +29,7 @@ HubStars.addSource
     el.className += ' twitter'
 
     el.innerHTML = """
-      <div class="label">Tweet</div><div class="odometer">0</div>
+      <div class="label">Tweet This</div><div class="odometer">0</div>
     """
 
     el.addEventListener 'click', (e) ->
