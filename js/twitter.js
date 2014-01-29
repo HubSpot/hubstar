@@ -26,7 +26,7 @@
   };
 
   HubStars.addSource({
-    pattern: /^\/twitter\/(\w+)\//,
+    pattern: /^\/twitter\/(\w+)/,
     init: function(el, theme) {
       var spinner, subtitle;
       el.className += ' twitter';

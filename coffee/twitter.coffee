@@ -23,7 +23,7 @@ init = (el) ->
   setTimeout update, 1000
 
 HubStars.addSource
-  pattern: /^\/twitter\/(\w+)\//
+  pattern: /^\/twitter\/(\w+)/
 
   init: (el, theme) ->
     el.className += ' twitter'
