@@ -48,6 +48,6 @@ HubStars.addSource
     el.addEventListener 'click', (e) ->
       e.preventDefault()
 
-      document.location = "https://github.com/#{ user }/#{ repo }"
+      window.open "https://github.com/#{ user }/#{ repo }", 'github'
 
     init spinner, user, repo

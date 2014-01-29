@@ -45,7 +45,7 @@
       spinner = el.querySelector('.odometer');
       el.addEventListener('click', function(e) {
         e.preventDefault();
-        return document.location = "https://github.com/" + user + "/" + repo;
+        return window.open("https://github.com/" + user + "/" + repo, 'github');
       });
       return init(spinner, user, repo);
     }
