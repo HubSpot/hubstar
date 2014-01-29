@@ -2,13 +2,16 @@ body {
   margin: 0;
 }
 .content {
-  padding: 10px;
   font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
   box-sizing: border-box;
   font-size: 16px;
   position: relative;
   display: inline-block;
   cursor: pointer;
+  min-width: 300px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
 }
 .label {
   background: #eee;
@@ -16,11 +19,11 @@ body {
   padding: 15px 13px 13px;
   line-height: 1;
   vertical-align: middle;
-  border-radius: 4px 0 0 4px;
   font-weight: bold;
   font-size: 1.5em;
   color: #333;
   min-width: 180px;
+  width: calc(100% - 15px - 13px);
 }
 .odometer {
   background: #444;
@@ -29,8 +32,11 @@ body {
   margin: auto;
   line-height: 1 !important;
   font-size: 1.5em;
-  border-radius: 0 4px 4px 0;
   font-weight: bold;
+  height: 52px;
+  position: absolute !important;
+  right: 0;
+  top: 0;
 }
 .subtitle {
   color: #444;
@@ -45,10 +51,11 @@ body {
   transition: -webkit-transform 500ms;
 }
 .content:hover .odometer-inside {
-  -webkit-transform: translateY(-50px);
+  -webkit-transform: translateY(-40px);
 }
 .content .odometer:before {
-  -webkit-transform: translateY(50px);
+  -webkit-transform: translateY(40px);
+  visibility: hidden;
   transition: -webkit-transform 500ms;
   position: absolute;
   margin: 0 -16px -11px;
@@ -56,6 +63,7 @@ body {
   text-align: center;
 }
 .content:hover .odometer:before {
+  visibility: visible;
   -webkit-transform: translateY(0);
 }
 
