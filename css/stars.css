@@ -55,7 +55,6 @@ body {
 }
 .content .odometer:before {
   -webkit-transform: translateY(40px);
-  visibility: hidden;
   transition: -webkit-transform 500ms;
   position: absolute;
   margin: 0 -16px -11px;
@@ -63,7 +62,6 @@ body {
   text-align: center;
 }
 .content:hover .odometer:before {
-  visibility: visible;
   -webkit-transform: translateY(0);
 }
 
