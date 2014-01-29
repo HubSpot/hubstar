@@ -1,5 +1,7 @@
 (function() {
-  var init;
+  var init, loc;
+
+  loc = window.parent.location || document.location;
 
   init = function(el) {
     var odometer, tag, update;
@@ -17,7 +19,7 @@
       }
     };
     update = function() {
-      tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=" + (document.location.toString().split('?')[0]) + "&_=" + (Math.random());
+      tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=" + (loc.toString().split('?')[0]) + "&_=" + (Math.random());
       return setTimeout(update, 10000);
     };
     return setTimeout(update, 1000);

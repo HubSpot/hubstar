@@ -1,3 +1,5 @@
+loc = window.parent.location || document.location
+
 init = (el) ->
   odometer = new Odometer
     el: el
@@ -14,7 +16,7 @@ init = (el) ->
       odometer.update data.count
 
   update = ->
-    tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=#{ document.location.toString().split('?')[0] }&_=#{ Math.random() }"
+    tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=#{ loc.toString().split('?')[0] }&_=#{ Math.random() }"
 
     setTimeout update, 10000
 
