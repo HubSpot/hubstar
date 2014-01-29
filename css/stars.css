@@ -19,6 +19,7 @@ body {
   font-weight: bold;
   font-size: 1.5em;
   color: #333;
+  min-width: 120px;
 }
 .odometer {
   background: #444;
