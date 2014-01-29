@@ -43,6 +43,6 @@ do ->
   spinner = document.querySelector '.odometer'
 
   subtitle = document.querySelector '.subtitle'
-  subtitle.innerHTML = "<a href='http://github.com/#{ matches[2] }/#{ matches[3] }'>Star</a> to save"
+  subtitle.innerHTML = "<a href='http://github.com/#{ matches[2] }/#{ matches[3] }'>Star Now</a>"
 
   init spinner, matches[2], matches[3]
