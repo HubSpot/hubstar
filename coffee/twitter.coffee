@@ -29,14 +29,10 @@ HubStars.addSource
     el.className += ' twitter'
 
     el.innerHTML = """
-      <div class="label">Tweets</div><div class="odometer">0</div>
-      <div class="subtitle"></div>
+      <div class="label">Tweet</div><div class="odometer">0</div>
     """
 
-    subtitle = el.querySelector '.subtitle'
-    subtitle.innerHTML = "<a target='_blank' href>Tweet Now</a>"
-
-    subtitle.addEventListener 'click', (e) ->
+    el.addEventListener 'click', (e) ->
       e.preventDefault()
       
       url = "https://twitter.com/intent/tweet#{ document.location.search }"

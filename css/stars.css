@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .label {
   background: #eee;
@@ -19,7 +20,7 @@ body {
   font-weight: bold;
   font-size: 1.5em;
   color: #333;
-  min-width: 120px;
+  min-width: 180px;
 }
 .odometer {
   background: #444;
@@ -37,5 +38,32 @@ body {
   padding-top: 2px;
 }
 .twitter .odometer {
-  background: #55AACE
+  background: #55AACE;
+}
+
+.content .odometer-inside {
+  transition: -webkit-transform 500ms;
+}
+.content:hover .odometer-inside {
+  -webkit-transform: translateY(-50px);
+}
+.content .odometer:before {
+  -webkit-transform: translateY(50px);
+  transition: -webkit-transform 500ms;
+  position: absolute;
+  margin: 0 -16px -11px;
+  width: 100%;
+  text-align: center;
+}
+.content:hover .odometer:before {
+  -webkit-transform: translateY(0);
+}
+
+.content.github .odometer:before {
+  content: "★";
+}
+.content.twitter .odometer:before {
+  font-family: social-icons;
+  content: '\e800';
+  margin-top: 2px;
 }

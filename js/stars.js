@@ -5,7 +5,7 @@
   path = document.location.pathname;
 
   if (path === '/404.html') {
-    path = '/twitter/spin/hubspot/tether';
+    path = '/github/spin/hubspot/tether';
   }
 
   HubStars = {

@@ -38,13 +38,14 @@ HubStars.addSource
     el.className += ' github'
 
     el.innerHTML = """
-      <div class="label">Github ★s</div><div class="odometer">0</div>
-      <div class="subtitle"></div>
+      <div class="label">Star on Github</div><div class="odometer">0</div>
     """
     
     spinner = el.querySelector '.odometer'
 
-    subtitle = el.querySelector '.subtitle'
-    subtitle.innerHTML = "<a href='http://github.com/#{ user }/#{ repo }'>Star Now</a>"
+    el.addEventListener 'click', (e) ->
+      e.preventDefault()
+
+      document.location = "https://github.com/#{ user }/#{ repo }"
 
     init spinner, user, repo

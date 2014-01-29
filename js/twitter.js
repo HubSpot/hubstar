@@ -28,12 +28,10 @@
   HubStars.addSource({
     pattern: /^\/twitter\/(\w+)/,
     init: function(el, theme) {
-      var spinner, subtitle;
+      var spinner;
       el.className += ' twitter';
-      el.innerHTML = "<div class=\"label\">Tweets</div><div class=\"odometer\">0</div>\n<div class=\"subtitle\"></div>";
-      subtitle = el.querySelector('.subtitle');
-      subtitle.innerHTML = "<a target='_blank' href>Tweet Now</a>";
-      subtitle.addEventListener('click', function(e) {
+      el.innerHTML = "<div class=\"label\">Tweet</div><div class=\"odometer\">0</div>";
+      el.addEventListener('click', function(e) {
         var left, top, url;
         e.preventDefault();
         url = "https://twitter.com/intent/tweet" + document.location.search;

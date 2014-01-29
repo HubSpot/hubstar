@@ -1,7 +1,7 @@
 path = document.location.pathname
 
 if path is '/404.html'
-  path = '/twitter/spin/hubspot/tether'
+  path = '/github/spin/hubspot/tether'
 
 HubStars =
   addSource: ({pattern, init}) ->
