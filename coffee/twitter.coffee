@@ -6,29 +6,19 @@ init = (el) ->
 
   odometer.render()
 
-  done = ->
-    setTimeout update, 10000
+  tag = document.createElement 'script'
+  document.body.appendChild tag
+
+  HubStars.Twitter =
+    set: (data) ->
+      odometer.update data.count
 
   update = ->
-    req = new XMLHttpRequest
+    tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=#{ document.location.toString().split('?')[0] }&_=#{ Math.random() }"
 
-    req.onload = ->
-      try
-        body = JSON.parse req.responseText
-      catch
-        return
-
-      odometer.update body.count
-
-      done()
-
-    req.onerror = done
-
-    req.open 'GET', "https://cdn.api.twitter.com/1/urls/count.json?callback=?&url=#{ document.location.toString().split('?')[0] }", true
-    req.send()
+    setTimeout update, 10000
 
   setTimeout update, 1000
-
 
 HubStars.addSource
   pattern: /^\/twitter\/(\w+)\//
@@ -42,7 +32,7 @@ HubStars.addSource
     """
 
     subtitle = el.querySelector '.subtitle'
-    subtitle.innerHTML = "<a href='https://twitter.com/intent/tweet#{ document.location.query }'>Tweet Now</a>"
+    subtitle.innerHTML = "<a href='https://twitter.com/intent/tweet#{ document.location.search }'>Tweet Now</a>"
 
     spinner = el.querySelector '.odometer'
 
