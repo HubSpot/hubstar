@@ -39,12 +39,12 @@
     re = /^\/(\w+)\/(\w+)\/(\w+)/;
     matches = re.exec(document.location.pathname);
     if (!matches) {
-      document.write("Path not understood, please double check the URL (try '/spin/HubSpot/stars')");
+      document.write("Path not understood, please double check the URL (try '/spin/HubSpot/tether')");
       return;
     }
     spinner = document.querySelector('.odometer');
     subtitle = document.querySelector('.subtitle');
-    subtitle.innerHTML = "<a href='http://github.com/" + matches[2] + "/" + matches[3] + "'>\nStar " + matches[3] + "</a> on GitHub to save.";
+    subtitle.innerHTML = "<a href='http://github.com/" + matches[2] + "/" + matches[3] + "'>Star</a> to save";
     return init(spinner, matches[2], matches[3]);
   })();
 
