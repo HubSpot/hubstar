@@ -1,6 +1,4 @@
-loc = window.parent.location || document.location
-
-init = (el) ->
+init = (el, query) ->
   odometer = new Odometer
     el: el
     theme: 'minimal'
@@ -16,7 +14,7 @@ init = (el) ->
       odometer.update data.count
 
   update = ->
-    tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=#{ loc.toString().split('?')[0] }&_=#{ Math.random() }"
+    tag.src = "https://cdn.api.twitter.com/1/urls/count.json?callback=HubStars.Twitter.set?&url=#{ query.url }&_=#{ Math.random() }"
 
     setTimeout update, 10000
 
@@ -25,11 +23,13 @@ init = (el) ->
 HubStars.addSource
   pattern: /^\/twitter\/(\w+)/
 
-  init: (el, theme) ->
+  init: ({el, query}) ->
     el.className += ' twitter'
 
+    name = query.name or 'This'
+
     el.innerHTML = """
-      <div class="label">Tweet This</div><div class="odometer">0</div>
+      <div class="label">Tweet #{ name }</div><div class="odometer">0</div>
     """
 
     el.addEventListener 'click', (e) ->
@@ -44,4 +44,4 @@ HubStars.addSource
 
     spinner = el.querySelector '.odometer'
 
-    init spinner
+    init spinner, query

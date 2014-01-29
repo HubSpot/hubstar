@@ -36,10 +36,12 @@
 
   HubStars.addSource({
     pattern: /^\/github\/(\w+)\/(\w+)\/(\w+)/,
-    init: function(el, theme, user, repo) {
-      var spinner;
+    init: function(_arg) {
+      var args, el, query, repo, spinner, theme, user;
+      el = _arg.el, args = _arg.args, query = _arg.query;
+      theme = args[0], user = args[1], repo = args[2];
       el.className += ' github';
-      el.innerHTML = "<div class=\"label\">Star on Github</div><div class=\"odometer\">0</div>";
+      el.innerHTML = "<div class=\"label\">Star " + (query.name || repo) + " on Github</div><div class=\"odometer\">0</div>";
       spinner = el.querySelector('.odometer');
       el.addEventListener('click', function(e) {
         e.preventDefault();

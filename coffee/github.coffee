@@ -34,11 +34,13 @@ init = (el, user, repo) ->
 HubStars.addSource
   pattern: /^\/github\/(\w+)\/(\w+)\/(\w+)/
 
-  init: (el, theme, user, repo) ->
+  init: ({el, args, query}) ->
+    [theme, user, repo] = args
+
     el.className += ' github'
 
     el.innerHTML = """
-      <div class="label">Star on Github</div><div class="odometer">0</div>
+      <div class="label">Star #{ query.name or repo } on Github</div><div class="odometer">0</div>
     """
     
     spinner = el.querySelector '.odometer'
