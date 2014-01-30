@@ -29,12 +29,27 @@ HubStars.addSource
     name = query.name or 'This'
 
     el.innerHTML = """
-      <div class="label">Tweet #{ name }</div><div class="odometer">0</div>
+      <div class="label-wrap-outermost">
+        <div class="label-wrap-outer">
+          <div class="label-wrap">
+            <div class="label">
+              Tweet #{ name }
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="odometer-wrap-outermost">
+        <div class="odometer-wrap-outer">
+          <div class="odometer-wrap">
+            <div class="odometer">0</div>
+          </div>
+        </div>
+      </div>
     """
 
     el.addEventListener 'click', (e) ->
       e.preventDefault()
-      
+
       url = "https://twitter.com/intent/tweet#{ document.location.search }"
 
       left = screen.width / 2 - 550 / 2

@@ -40,9 +40,24 @@ HubStars.addSource
     el.className += ' github'
 
     el.innerHTML = """
-      <div class="label">Star #{ query.name or repo } on Github</div><div class="odometer">0</div>
+      <div class="label-wrap-outermost">
+        <div class="label-wrap-outer">
+          <div class="label-wrap">
+            <div class="label">
+              Star #{ query.name or repo } on Github
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="odometer-wrap-outermost">
+        <div class="odometer-wrap-outer">
+          <div class="odometer-wrap">
+            <div class="odometer">0</div>
+          </div>
+        </div>
+      </div>
     """
-    
+
     spinner = el.querySelector '.odometer'
 
     el.addEventListener 'click', (e) ->

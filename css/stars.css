@@ -1,75 +1,255 @@
-body {
+html, body {
   margin: 0;
-}
-.content {
-  font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
-  box-sizing: border-box;
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  min-width: 300px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
-  border-radius: 4px;
 }
-.label {
-  background: #eee;
-  display: inline-block;
-  padding: 15px 13px 13px;
-  line-height: 1;
-  vertical-align: middle;
-  font-weight: bold;
-  font-size: 1.5em;
+
+body {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
   color: #333;
-  min-width: 180px;
-  width: calc(100% - 15px - 13px);
 }
-.odometer {
-  background: #444;
-  color: #fff;
-  padding: 13px 16px 11px;
-  margin: auto;
-  line-height: 1 !important;
-  font-size: 1.5em;
-  font-weight: bold;
-  height: 52px;
-  position: absolute !important;
-  right: 0;
+
+@media(min-height:1px){html{font-size:1px}}
+@media(min-height:2px){html{font-size:2px}}
+@media(min-height:3px){html{font-size:3px}}
+@media(min-height:4px){html{font-size:4px}}
+@media(min-height:5px){html{font-size:5px}}
+@media(min-height:6px){html{font-size:6px}}
+@media(min-height:7px){html{font-size:7px}}
+@media(min-height:8px){html{font-size:8px}}
+@media(min-height:9px){html{font-size:9px}}
+@media(min-height:10px){html{font-size:10px}}
+@media(min-height:11px){html{font-size:11px}}
+@media(min-height:12px){html{font-size:12px}}
+@media(min-height:13px){html{font-size:13px}}
+@media(min-height:14px){html{font-size:14px}}
+@media(min-height:15px){html{font-size:15px}}
+@media(min-height:16px){html{font-size:16px}}
+@media(min-height:17px){html{font-size:17px}}
+@media(min-height:18px){html{font-size:18px}}
+@media(min-height:19px){html{font-size:19px}}
+@media(min-height:20px){html{font-size:20px}}
+@media(min-height:21px){html{font-size:21px}}
+@media(min-height:22px){html{font-size:22px}}
+@media(min-height:23px){html{font-size:23px}}
+@media(min-height:24px){html{font-size:24px}}
+@media(min-height:25px){html{font-size:25px}}
+@media(min-height:26px){html{font-size:26px}}
+@media(min-height:27px){html{font-size:27px}}
+@media(min-height:28px){html{font-size:28px}}
+@media(min-height:29px){html{font-size:29px}}
+@media(min-height:30px){html{font-size:30px}}
+@media(min-height:31px){html{font-size:31px}}
+@media(min-height:32px){html{font-size:32px}}
+@media(min-height:33px){html{font-size:33px}}
+@media(min-height:34px){html{font-size:34px}}
+@media(min-height:35px){html{font-size:35px}}
+@media(min-height:36px){html{font-size:36px}}
+@media(min-height:37px){html{font-size:37px}}
+@media(min-height:38px){html{font-size:38px}}
+@media(min-height:39px){html{font-size:39px}}
+@media(min-height:40px){html{font-size:40px}}
+@media(min-height:41px){html{font-size:41px}}
+@media(min-height:42px){html{font-size:42px}}
+@media(min-height:43px){html{font-size:43px}}
+@media(min-height:44px){html{font-size:44px}}
+@media(min-height:45px){html{font-size:45px}}
+@media(min-height:46px){html{font-size:46px}}
+@media(min-height:47px){html{font-size:47px}}
+@media(min-height:48px){html{font-size:48px}}
+@media(min-height:49px){html{font-size:49px}}
+@media(min-height:50px){html{font-size:50px}}
+@media(min-height:51px){html{font-size:51px}}
+@media(min-height:52px){html{font-size:52px}}
+@media(min-height:53px){html{font-size:53px}}
+@media(min-height:54px){html{font-size:54px}}
+@media(min-height:55px){html{font-size:55px}}
+@media(min-height:56px){html{font-size:56px}}
+@media(min-height:57px){html{font-size:57px}}
+@media(min-height:58px){html{font-size:58px}}
+@media(min-height:59px){html{font-size:59px}}
+@media(min-height:60px){html{font-size:60px}}
+@media(min-height:61px){html{font-size:61px}}
+@media(min-height:62px){html{font-size:62px}}
+@media(min-height:63px){html{font-size:63px}}
+@media(min-height:64px){html{font-size:64px}}
+@media(min-height:65px){html{font-size:65px}}
+@media(min-height:66px){html{font-size:66px}}
+@media(min-height:67px){html{font-size:67px}}
+@media(min-height:68px){html{font-size:68px}}
+@media(min-height:69px){html{font-size:69px}}
+@media(min-height:70px){html{font-size:70px}}
+@media(min-height:71px){html{font-size:71px}}
+@media(min-height:72px){html{font-size:72px}}
+@media(min-height:73px){html{font-size:73px}}
+@media(min-height:74px){html{font-size:74px}}
+@media(min-height:75px){html{font-size:75px}}
+@media(min-height:76px){html{font-size:76px}}
+@media(min-height:77px){html{font-size:77px}}
+@media(min-height:78px){html{font-size:78px}}
+@media(min-height:79px){html{font-size:79px}}
+@media(min-height:80px){html{font-size:80px}}
+@media(min-height:81px){html{font-size:81px}}
+@media(min-height:82px){html{font-size:82px}}
+@media(min-height:83px){html{font-size:83px}}
+@media(min-height:84px){html{font-size:84px}}
+@media(min-height:85px){html{font-size:85px}}
+@media(min-height:86px){html{font-size:86px}}
+@media(min-height:87px){html{font-size:87px}}
+@media(min-height:88px){html{font-size:88px}}
+@media(min-height:89px){html{font-size:89px}}
+@media(min-height:90px){html{font-size:90px}}
+@media(min-height:91px){html{font-size:91px}}
+@media(min-height:92px){html{font-size:92px}}
+@media(min-height:93px){html{font-size:93px}}
+@media(min-height:94px){html{font-size:94px}}
+@media(min-height:95px){html{font-size:95px}}
+@media(min-height:96px){html{font-size:96px}}
+@media(min-height:97px){html{font-size:97px}}
+@media(min-height:98px){html{font-size:98px}}
+@media(min-height:99px){html{font-size:99px}}
+
+.content {
+  box-sizing: border-box;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  font-size: .2em;
+  display: inline-block;
+  cursor: pointer;
 }
+
+.label-wrap-outermost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 8em;
+  bottom: 0;
+  text-align: center;
+}
+
+.label-wrap-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  border-radius: 4px 0 0 4px;
+}
+
+.label-wrap {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: .5em 1em;
+  height: 4em;
+  line-height: 4em;
+}
+
+.label {
+  font-size: 2em;
+  line-height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.odometer-wrap-outermost {
+  position: absolute;
+  width: 8em;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.odometer-wrap-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #444;
+  color: #eee;
+  border-radius: 0 4px 4px 0;
+}
+
+.odometer-wrap {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: .5em 1em;
+  height: 4em;
+  line-height: 4em;
+  overflow: hidden;
+}
+
+.odometer {
+  font-size: 2em;
+  line-height: 2em;
+  width: 100%;
+}
+
 .subtitle {
   color: #444;
   text-align: center;
   padding-top: 2px;
 }
+
 .twitter .odometer {
-  background: #55AACE;
+  background: #55aace;
 }
 
-.content .odometer-inside {
-  transition: -webkit-transform 500ms;
+.content .odometer-inside, .content .odometer:before {
+  -webkit-transition: -webkit-transform 500ms;
+  -moz-transition: -moz-transform 500ms;
+  -ms-transition: -ms-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: transform 500ms;
 }
+
 .content:hover .odometer-inside {
-  -webkit-transform: translateY(-40px);
+  -webkit-transform: translateY(-4em);
+  -moz-transform: translateY(-4em);
+  -ms-transform: translateY(-4em);
+  -o-transform: translateY(-4em);
+  transform: translateY(-4em);
 }
+
 .content .odometer:before {
-  -webkit-transform: translateY(40px);
-  transition: -webkit-transform 500ms;
+  -webkit-transform: translateY(4em);
+  -moz-transform: translateY(4em);
+  -ms-transform: translateY(4em);
+  -o-transform: translateY(4em);
+  transform: translateY(4em);
+
   position: absolute;
-  margin: 0 -16px -11px;
+  left: 0;
   width: 100%;
   text-align: center;
 }
+
 .content:hover .odometer:before {
   -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .content.github .odometer:before {
   content: "★";
 }
+
 .content.twitter .odometer:before {
   font-family: social-icons;
   content: '\e800';
-  margin-top: 2px;
 }
