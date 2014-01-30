@@ -30,7 +30,7 @@
       el = _arg.el, query = _arg.query;
       el.className += ' twitter';
       name = query.name || 'This';
-      el.innerHTML = "<div class=\"label\">Tweet " + name + "</div><div class=\"odometer\">0</div>";
+      el.innerHTML = "<div class=\"label-wrap-outermost\">\n  <div class=\"label-wrap-outer\">\n    <div class=\"label-wrap\">\n      <div class=\"label\">\n        Tweet " + name + "\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"odometer-wrap-outermost\">\n  <div class=\"odometer-wrap-outer\">\n    <div class=\"odometer-wrap\">\n      <div class=\"odometer\">0</div>\n    </div>\n  </div>\n</div>";
       el.addEventListener('click', function(e) {
         var left, top, url;
         e.preventDefault();
