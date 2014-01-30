@@ -41,7 +41,7 @@
       el = _arg.el, args = _arg.args, query = _arg.query;
       theme = args[0], user = args[1], repo = args[2];
       el.className += ' github';
-      el.innerHTML = "<div class=\"label\">Star " + (query.name || repo) + " on Github</div><div class=\"odometer\">0</div>";
+      el.innerHTML = "<div class=\"label-wrap-outermost\">\n  <div class=\"label-wrap-outer\">\n    <div class=\"label-wrap\">\n      <div class=\"label\">\n        Star " + (query.name || repo) + " on Github\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"odometer-wrap-outermost\">\n  <div class=\"odometer-wrap-outer\">\n    <div class=\"odometer-wrap\">\n      <div class=\"odometer\">0</div>\n    </div>\n  </div>\n</div>";
       spinner = el.querySelector('.odometer');
       el.addEventListener('click', function(e) {
         e.preventDefault();

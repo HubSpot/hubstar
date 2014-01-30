@@ -3,7 +3,7 @@
 
   path = document.location.pathname;
 
-  if (path === '/404.html') {
+  if (/\/404\.html$/.test(path)) {
     path = '/github/spin/hubspot/tether';
   }
 
