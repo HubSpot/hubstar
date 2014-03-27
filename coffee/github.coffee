@@ -32,7 +32,7 @@ init = (el, user, repo) ->
   setTimeout update, 1000
 
 HubStars.addSource
-  pattern: /^\/github\/(\w+)\/(\w+)\/(\w+)/
+  pattern: /^\/github\/(\w+)\/(\w+)\/([^\/]+)/
 
   init: ({el, args, query}) ->
     [theme, user, repo] = args

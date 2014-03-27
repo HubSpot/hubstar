@@ -35,7 +35,7 @@
   };
 
   HubStars.addSource({
-    pattern: /^\/github\/(\w+)\/(\w+)\/(\w+)/,
+    pattern: /^\/github\/(\w+)\/(\w+)\/([^\/]+)/,
     init: function(_arg) {
       var args, el, query, repo, spinner, theme, user;
       el = _arg.el, args = _arg.args, query = _arg.query;
